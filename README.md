@@ -1,7 +1,7 @@
-# LioranDB AI Assistant
+# AI Documentation Assistant using RAG
 
 ## Overview
-LioranDB AI Assistant is a RAG-powered chatbot designed to answer questions using the source documentation. It crawls the site, chunks the markdown, embeds it into a local ChromaDB vector store, and uses Google Gemini to generate grounded answers with source citations. This ensures users get fast, accurate, and verifiable answers directly from the documentation.
+AI Documentation Assistant is a RAG-powered chatbot designed to answer questions using the source documentation. It crawls the site, chunks the markdown, embeds it into a local ChromaDB vector store, and uses Google Gemini to generate grounded answers with source citations. This ensures users get fast, accurate, and verifiable answers directly from the documentation.
 
 ## Architecture
 ```text
