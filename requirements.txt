@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+python-dotenv
+jinja2
+httpx
+beautifulsoup4
+markdownify
+sentence-transformers
+chromadb
+google-generativeai
+aiofiles
+sqlalchemy
+cryptography
+requests

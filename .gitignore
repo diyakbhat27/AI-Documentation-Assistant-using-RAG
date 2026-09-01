@@ -1,0 +1,37 @@
+# ── Secrets ──────────────────────────────────────────────────
+.env
+
+# ── Runtime data (generated at runtime, not part of source) ──
+chroma_db/
+cache/
+data/
+
+# ── Python ───────────────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+env/
+
+# ── Testing ──────────────────────────────────────────────────
+.pytest_cache/
+htmlcov/
+.coverage
+
+# ── IDEs ─────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.code-workspace
+
+# ── OS ───────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ── Misc ─────────────────────────────────────────────────────
+*.log
+test_key.py
