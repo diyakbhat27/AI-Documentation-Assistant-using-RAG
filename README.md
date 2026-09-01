@@ -1,11 +1,11 @@
 # LioranDB AI Assistant
 
 ## Overview
-LioranDB AI Assistant is a RAG-powered chatbot designed to answer questions using the official LioranDB documentation. It crawls the site, chunks the markdown, embeds it into a local ChromaDB vector store, and uses Google Gemini to generate grounded answers with source citations. This ensures users get fast, accurate, and verifiable answers directly from the documentation.
+LioranDB AI Assistant is a RAG-powered chatbot designed to answer questions using the source documentation. It crawls the site, chunks the markdown, embeds it into a local ChromaDB vector store, and uses Google Gemini to generate grounded answers with source citations. This ensures users get fast, accurate, and verifiable answers directly from the documentation.
 
 ## Architecture
 ```text
-LioranDB Docs Site
+Source Site
       ↓
 Crawler (httpx + BeautifulSoup)
       ↓
@@ -69,35 +69,4 @@ docker compose up --build
 - All queries logged to `data/query_logs.db`. Open with any SQLite viewer to inspect history.
 - Out of scope questions return: "I couldn't find this in the LioranDB documentation."
 
-## Sample Q&A
-Here are 10 sample questions you can ask the assistant to evaluate its capabilities:
 
-1. **Q:** How do I create a table in LioranDB?
-   **A:** The assistant will provide the `CREATE TABLE` syntax, complete with data type explanations and source citations.
-
-2. **Q:** What data types does LioranDB support?
-   **A:** It will list supported types such as `INT`, `VARCHAR`, and `TEXT` referencing the SQL Reference guide.
-
-3. **Q:** How can I configure the embedded manager?
-   **A:** You will receive step-by-step instructions for starting the manager and configuring its port.
-
-4. **Q:** What are the system requirements for installing LioranDB?
-   **A:** It details the required RAM, CPU, and OS compatibility based on the Getting Started documentation.
-
-5. **Q:** How do I create an index to improve query performance?
-   **A:** It returns the `CREATE INDEX` syntax and explains how it affects retrieval speed.
-
-6. **Q:** Can I use LioranDB in a Docker container?
-   **A:** Yes, it will provide the official `docker run` command and default volume mappings.
-
-7. **Q:** How do I write a basic SELECT query with a WHERE clause?
-   **A:** It outputs an example query highlighting basic operators (`=`, `>`, `<`).
-
-8. **Q:** What is the difference between VARCHAR and TEXT?
-   **A:** It will explain storage limitations and performance trade-offs from the documentation.
-
-9. **Q:** How do I back up my database?
-   **A:** It will provide the CLI backup command or backup utility process.
-
-10. **Q:** What is the recipe for a chocolate cake?
-    **A:** *Out of scope.* The assistant will reply exactly with: "I couldn't find this in the LioranDB documentation."
